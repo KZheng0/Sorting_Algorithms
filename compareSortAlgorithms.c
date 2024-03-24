@@ -158,18 +158,18 @@ void insertionSort(int* pData, int n)
 void bubbleSort(int* pData, int n)
 {
 	int i, j, tmp;
-    for (i = 0; i < n-1; i++)
+	for (i = 0; i < n-1; i++)
 	{
-        for (j = 0; j < n-i-1; j++)
+		for (j = 0; j < n-i-1; j++)
 		{
-            if (pData[j] > pData[j+1])
+			if (pData[j] > pData[j+1])
 			{
-                tmp = pData[j];
-                pData[j] = pData[j+1];
-                pData[j+1] = tmp;
-            }
-        }
-    }
+				tmp = pData[j];
+				pData[j] = pData[j+1];
+				pData[j+1] = tmp;
+			}
+		}
+	}
 }
 
 // implement selection sort
@@ -177,20 +177,22 @@ void bubbleSort(int* pData, int n)
 void selectionSort(int* pData, int n)
 {
 	int i, j, min, tmp;
-    for (i = 0; i < n-1; i++){
-        min = i;
-        for (j = i+1; j < n; j++)
+	for (i = 0; i < n-1; i++)
+	{
+		min = i;
+	for (j = i+1; j < n; j++)
+	{
+		if (pData[j] < pData[min])
 		{
-            if (pData[j] < pData[min])
-			{
-                min = j;
-            }
-        }
-		
-		tmp = pData[i];
-		pData[i] = pData[min];
-		pData[min] = tmp;
-    }
+			min = j;
+		}
+	}
+
+	tmp = pData[i];
+	pData[i] = pData[min];
+	pData[min] = tmp;
+	
+	}
 }
 
 // parses input file to an integer array
