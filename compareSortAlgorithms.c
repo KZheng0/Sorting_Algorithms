@@ -53,18 +53,18 @@ void heapify(int arr[], int n, int i)
 // extraMemoryAllocated counts bytes of memory allocated
 void heapSort(int arr[], int n)
 {
-	int i, tmp; 
-  
-    for (i = n / 2 - 1; i >= 0; i--) { 
-        heapify(arr, n, i); 
-    } 
-  
-    for (i = n - 1; i > 0; i--) { 
-        tmp = arr[0]; 
-        arr[0] = arr[i]; 
-        arr[i] = tmp; 
-        heapify(arr, i, 0); 
-    } 
+	int i, tmp;
+	 
+	for (i = n / 2 - 1; i >= 0; i--) { 
+		heapify(arr, n, i); 
+	} 
+
+	for (i = n - 1; i > 0; i--) { 
+		tmp = arr[0]; 
+		arr[0] = arr[i]; 
+		arr[i] = tmp; 
+		heapify(arr, i, 0); 
+	} 
 }
 
 // implement merge sort
